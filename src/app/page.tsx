@@ -1,101 +1,240 @@
-import Image from "next/image";
+"use client";
+
+import Image from 'next/image';
+import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Navbar";
+import PortfolioSection from "./components/GallerySection";
+import WorkflowSection from "./components/WorkflowSection";
+import Footer from "./components/Footer";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { useTranslations } from "./hooks/useTranslations";
+
+// Composant pour indiquer les sections de la page
+const SectionIndicator = () => {
+  const [activeSection, setActiveSection] = useState("hero");
+  const { t } = useTranslations();
+
+  useEffect(() => {
+    const sections = ["hero", "portfolio", "workflow"];
+    
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  // Mapping des noms de sections pour un affichage plus propre
+  const sectionDisplayNames: {[key: string]: string} = {
+    "hero": t('sections.hero'),
+    "portfolio": t('sections.portfolio'),
+    "workflow": t('sections.workflow')
+  };
+
+  return (
+    <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden md:block">
+      <div className="relative">
+        {/* Ligne verticale de fond */}
+        <div className="absolute left-[9px] top-0 h-full w-[2px] bg-gradient-to-b from-transparent via-[#FF3333]/20 to-transparent rounded-full"></div>
+        
+        {/* Indicateurs de section */}
+        <div className="flex flex-col space-y-8">
+          {["hero", "portfolio", "workflow"].map((section) => (
+            <button
+              key={section}
+              onClick={() => scrollToSection(section)}
+              className="group relative flex items-center"
+              aria-label={`${t('scroller.ariaLabel')} ${sectionDisplayNames[section]}`}
+            >
+              {/* Cercle indicateur */}
+              <div className={`relative z-10 rounded-full border transition-all duration-300 ${
+                activeSection === section 
+                  ? "w-5 h-5 bg-[#FF3333] border-[#FF3333] shadow-[0_0_12px_rgba(255,51,51,0.6)]" 
+                  : "w-4 h-4 bg-white border-[#FF3333]/40 group-hover:border-[#FF3333]"
+              }`}></div>
+              
+              {/* Texte de la section */}
+              <div className="relative overflow-hidden">
+                <span className={`ml-3 text-sm font-medium whitespace-nowrap transition-all duration-300 ${
+                  activeSection === section
+                    ? "opacity-100 translate-x-0 text-[#FF3333]"
+                    : "opacity-0 -translate-x-4 text-gray-600 group-hover:opacity-80 group-hover:-translate-x-1"
+                }`}>
+                  {sectionDisplayNames[section]}
+                </span>
+              </div>
+              
+              {/* Effet de survol */}
+              {activeSection === section && (
+                <div className="absolute left-[9px] w-[2px] h-6 -top-6 rounded-full bg-gradient-to-t from-[#FF3333] to-transparent"></div>
+              )}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Composant pour le bouton de retour en haut
+const ScrollToTop = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const { t } = useTranslations();
+
+  const handleScroll = useCallback(() => {
+    if (window.scrollY > 500) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  return (
+    <button
+      onClick={scrollToTop}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`fixed bottom-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-white text-[#FF3333] border border-[#FF3333]/20 shadow-lg transition-all duration-500 z-50 overflow-hidden ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12 pointer-events-none"
+      }`}
+      aria-label={t('scrollToTop')}
+    >
+      <div className={`absolute inset-0 bg-[#FF3333] transition-all duration-500 ${
+        isHovered ? "opacity-100" : "opacity-0"
+      }`}></div>
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        className={`h-6 w-6 relative z-10 transition-colors duration-300 ${isHovered ? 'text-white' : 'text-[#FF3333]'}`} 
+        fill="none" 
+        viewBox="0 0 24 24" 
+        stroke="currentColor"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+      </svg>
+      <div className={`absolute -bottom-6 left-0 w-full h-2 bg-[#FF3333]/10 transform scale-x-0 transition-transform duration-500 ${
+        isHovered ? "scale-x-100" : ""
+      }`}></div>
+    </button>
+  );
+};
+
+// Composant pour les sections avec animation de défilement
+const AnimatedSection = ({ id, children }: { id: string, children: React.ReactNode }) => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsVisible(true);
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
+  return (
+    <div 
+      id={id} 
+      ref={sectionRef}
+      className={`transition-all duration-1000 ease-out ${isVisible ? 'visible opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+    >
+      {children}
+    </div>
+  );
+};
+
+// Composant de préchargement
+const Preloader = ({ onFinish }: { onFinish: () => void }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onFinish();
+    }, 2000);
+    
+    return () => clearTimeout(timer);
+  }, [onFinish]);
+  
+  return (
+    <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center">
+      <div className="w-64 bg-gray-200 h-1 rounded-full overflow-hidden">
+        <div className="bg-[#FF3333] h-full w-full origin-left transform-gpu animate-[loader_2s_ease-in-out]"></div>
+      </div>
+    </div>
+  );
+};
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [isLoading, setIsLoading] = useState(true);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  return (
+    <main className="overflow-x-hidden">
+      {isLoading ? (
+        <Preloader onFinish={() => setIsLoading(false)} />
+      ) : (
+        <>
+          <Navbar />
+          <SectionIndicator />
+          <ScrollToTop />
+          
+          <AnimatedSection id="hero">
+            <HeroSection />
+          </AnimatedSection>
+
+          <AnimatedSection id="portfolio">
+            <PortfolioSection />
+          </AnimatedSection>
+
+          <AnimatedSection id="workflow">
+            <WorkflowSection />
+          </AnimatedSection>
+
+          <Footer />
+        </>
+      )}
+    </main>
   );
 }

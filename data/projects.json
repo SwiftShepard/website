@@ -1,0 +1,126 @@
+{
+  "en": {
+    "test": {
+      "id": "test",
+      "slug": "test",
+      "title": "test",
+      "description": "test desc courte",
+      "longDescription": "test desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longue",
+      "category": "Environments",
+      "coverImage": "/uploads/d48aeeb1-91e6-4f51-b3e1-dfb7cfd5c843.png",
+      "thumbnailImage": "/uploads/d48aeeb1-91e6-4f51-b3e1-dfb7cfd5c843.png",
+      "gallery": [
+        "/uploads/f025c9c8-569a-423e-838d-7c48138b4b57.png",
+        "/uploads/d48aeeb1-91e6-4f51-b3e1-dfb7cfd5c843.png",
+        "/uploads/03ba326a-17d3-41f8-9509-1aa93ba003cf.mp4"
+      ],
+      "featured": true,
+      "stats": {
+        "polygons": "15.4m",
+        "textures": "7",
+        "time": "12 semaines",
+        "iterations": "4"
+      },
+      "date": "2025-08",
+      "client": "Projet personnel",
+      "tools": [
+        "unreal engine 5",
+        "Substance painter",
+        "Substance designer"
+      ],
+      "media": [
+        {
+          "path": "/uploads/f025c9c8-569a-423e-838d-7c48138b4b57.png",
+          "description": "aezertezezerezzr"
+        },
+        {
+          "path": "/uploads/d48aeeb1-91e6-4f51-b3e1-dfb7cfd5c843.png",
+          "description": ""
+        },
+        {
+          "path": "/uploads/03ba326a-17d3-41f8-9509-1aa93ba003cf.mp4",
+          "description": ""
+        }
+      ]
+    },
+    "azerty": {
+      "id": "azerty",
+      "slug": "azerty",
+      "title": "azerty",
+      "description": "qsd",
+      "longDescription": "wxc",
+      "category": "Environments",
+      "coverImage": "/uploads/8eab3d81-c0fd-4c6f-8260-23c2d1cdbd81.png",
+      "thumbnailImage": "blob:http://localhost:3000/67360613-4369-4a48-bdd4-bf494e205f58",
+      "gallery": [
+        "/uploads/4fa8cb61-9093-49e2-9828-fbebd2d55ecd.mp4",
+        "/uploads/8eab3d81-c0fd-4c6f-8260-23c2d1cdbd81.png"
+      ],
+      "featured": false,
+      "projectType": "Studio",
+      "tools": [
+        "blender",
+        "3dsmax",
+        "unreal engine 5"
+      ],
+      "date": "2025-02",
+      "media": [
+        {
+          "path": "/uploads/4fa8cb61-9093-49e2-9828-fbebd2d55ecd.mp4",
+          "description": ""
+        },
+        {
+          "path": "/uploads/8eab3d81-c0fd-4c6f-8260-23c2d1cdbd81.png",
+          "description": ""
+        }
+      ]
+    },
+    "sdfgvds": {
+      "id": "sdfgvds",
+      "slug": "sdfgvds",
+      "title": "sdfgvds",
+      "description": "qsd",
+      "longDescription": "qsd",
+      "category": "Environments",
+      "coverImage": "/uploads/d2a307ea-55ec-41f4-9363-e60d321dc3cf.png",
+      "thumbnailImage": "blob:http://localhost:3000/64c8f751-1a9c-4aa7-bac5-051b97d94e05",
+      "gallery": [
+        "/uploads/d2a307ea-55ec-41f4-9363-e60d321dc3cf.png"
+      ],
+      "featured": false,
+      "projectType": "Personal",
+      "tools": [],
+      "date": "",
+      "media": [
+        {
+          "path": "/uploads/d2a307ea-55ec-41f4-9363-e60d321dc3cf.png",
+          "description": ""
+        }
+      ]
+    },
+    "qsgqsvf": {
+      "id": "qsgqsvf",
+      "slug": "qsgqsvf",
+      "title": "qsgqsvf",
+      "description": "SDFS",
+      "longDescription": "SFS",
+      "category": "Environments",
+      "coverImage": "/uploads/397343ca-9adf-49f8-88d9-72fcf8b9f5a0.png",
+      "thumbnailImage": "blob:http://localhost:3000/2484863d-d29a-46c3-829a-4bf7a97915fc",
+      "gallery": [
+        "/uploads/397343ca-9adf-49f8-88d9-72fcf8b9f5a0.png"
+      ],
+      "featured": false,
+      "projectType": "Personal",
+      "tools": [],
+      "date": "",
+      "media": [
+        {
+          "path": "/uploads/397343ca-9adf-49f8-88d9-72fcf8b9f5a0.png",
+          "description": ""
+        }
+      ]
+    }
+  },
+  "fr": {}
+}
