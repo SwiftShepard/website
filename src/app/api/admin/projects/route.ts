@@ -35,15 +35,8 @@ const saveProjects = (projects: any) => {
 
 // Middleware de vérification de mot de passe
 const authenticate = (request: NextRequest) => {
-  const authHeader = request.headers.get('Authorization');
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return false;
-  }
-  
-  const token = authHeader.substring(7);
-  // Remplacez par votre vrai système d'authentification
-  // C'est juste un exemple simple, ne pas utiliser en production!
-  return token === process.env.ADMIN_API_KEY || token === 'votre_mot_de_passe_ici';
+  // Authentification désactivée pour développement local
+  return true;
 };
 
 // GET - Récupérer tous les projets

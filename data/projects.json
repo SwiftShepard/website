@@ -120,6 +120,36 @@
           "description": ""
         }
       ]
+    },
+    "ajajajaja": {
+      "id": "ajajajaja",
+      "slug": "ajajajaja",
+      "title": "ajajajaja",
+      "description": "vfgwxsfdf",
+      "longDescription": "sdfsfqfdsv",
+      "category": "Environments",
+      "coverImage": "/uploads/5d5cd75b-4ac3-4fb6-8e7a-96f93b8505a2.png",
+      "thumbnailImage": "blob:http://localhost:3000/6ad9be9c-1e6b-4581-9a99-2a18fcd942f5",
+      "gallery": [
+        "/uploads/5d5cd75b-4ac3-4fb6-8e7a-96f93b8505a2.png",
+        "/uploads/7a787aac-d607-44fc-a14f-e116289ebf42.png"
+      ],
+      "featured": false,
+      "projectType": "Personal",
+      "tools": [
+        "blender"
+      ],
+      "date": "",
+      "media": [
+        {
+          "path": "/uploads/5d5cd75b-4ac3-4fb6-8e7a-96f93b8505a2.png",
+          "description": ""
+        },
+        {
+          "path": "/uploads/7a787aac-d607-44fc-a14f-e116289ebf42.png",
+          "description": ""
+        }
+      ]
     }
   },
   "fr": {}

@@ -87,8 +87,13 @@ export default function AdminEditor() {
     type: 'image' | 'video';
   } | null>(null);
   
-  // Pour le développement, décommenter cette ligne pour accéder directement à l'administration
-  // useEffect(() => { setIsAuthenticated(true); }, []);
+  // Effet pour l'authentification automatique
+  useEffect(() => {
+    // Accès direct sans mot de passe
+    setIsAuthenticated(true);
+    // Charger les projets immédiatement
+    fetchProjects();
+  }, []);
   
   // Vérification de l'initialisation correcte
   useEffect(() => {

@@ -6,16 +6,10 @@ import { v4 as uuidv4 } from 'uuid';
 // Définir le dossier d'upload
 const UPLOAD_DIR = path.join(process.cwd(), 'public/uploads');
 
-// Vérification de l'authentification
+// Middleware de vérification de mot de passe
 const authenticate = (request: NextRequest) => {
-  const authHeader = request.headers.get('Authorization');
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return false;
-  }
-  
-  const token = authHeader.substring(7);
-  // Utiliser le même mot de passe que l'API projects
-  return token === process.env.ADMIN_API_KEY || token === 'votre_mot_de_passe_ici';
+  // Authentification désactivée pour développement local
+  return true;
 };
 
 // POST - Télécharger une image
