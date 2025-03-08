@@ -839,7 +839,7 @@ const ProjectPage = () => {
   );
 };
 
-export default ProjectPage; 
+export default ProjectPage;
 
 <style jsx global>{`
   /* Animations pour la page de projet */

@@ -1390,11 +1390,11 @@ code, pre {
 
 /* Transition entre les pages */
 .page-transition-out {
-  animation: fadeToWhite 0.5s forwards;
+  animation: fadeToWhite 0.3s forwards;
 }
 
 .page-transition-in {
-  animation: fadeFromWhite 0.7s forwards;
+  animation: fadeFromWhite 0.3s forwards;
 }
 
 @keyframes fadeToWhite {

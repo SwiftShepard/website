@@ -111,8 +111,8 @@ const ProjectCard = ({ project, translations }: ProjectCardProps) => {
         setTimeout(() => {
           console.log("Redirection vers /transition");
           window.location.href = "/transition";
-        }, 270);
-      }, 90);
+        }, 150);
+      }, 50);
     } catch (error) {
       console.error("Erreur lors de la navigation:", error);
       // En cas d'erreur, rediriger directement vers la page du projet

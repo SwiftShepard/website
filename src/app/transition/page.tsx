@@ -19,8 +19,8 @@ export default function TransitionPage() {
   const frameRef = useRef<number | null>(null);
   const redirectTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const startTimeRef = useRef<number>(Date.now());
-  const totalLoadingTime = 3000; // Durée totale du chargement (3 secondes)
-  const minimumLoadingTime = 1000; // Temps minimum de chargement (1 seconde)
+  const totalLoadingTime = 1000; // Réduit à 1 seconde (était 2250ms)
+  const minimumLoadingTime = 500; // Réduit à 0.5 seconde (était 750ms)
   
   // Effet pour animer les points de chargement
   useEffect(() => {
@@ -414,15 +414,15 @@ export default function TransitionPage() {
             console.error('Erreur lors de la redirection:', error);
             window.location.href = '/';
           }
-        }, 750); // Délai de transition
-      }, 300); // Délai pour montrer la barre à 100%
+        }, 300); // Délai de transition réduit de 750ms à 300ms
+      }, 100); // Délai pour montrer la barre à 100% réduit de 300ms à 100ms
     };
     
-    // Prépare la redirection au cas où le chargement régulier échouerait
+    // Préprepare la redirection au cas où le chargement régulier échouerait
     const safetyTimeout = setTimeout(() => {
       console.log('Délai de sécurité atteint, redirection forcée');
       finishLoadingAndRedirect();
-    }, 6000); // 6 secondes maximum
+    }, 3000); // Réduit de 6 secondes à 3 secondes
     
     // Précharger la page de destination si c'est une page de projet
     if (targetUrl.startsWith('/projects/')) {

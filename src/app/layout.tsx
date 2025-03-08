@@ -3,6 +3,7 @@ import "./globals.css";
 import { LanguageProvider } from './context/LanguageContext';
 import { CursorProvider } from './context/CursorContext';
 import CustomCursor from './components/CustomCursor';
+import NavigationHandler from './components/NavigationHandler';
 
 export const metadata: Metadata = {
   title: "Portfolio de Valentin",
@@ -66,6 +67,7 @@ export default function RootLayout({
       <body>
         <LanguageProvider>
           <CursorProvider>
+            <NavigationHandler />
             <CustomCursor />
             {children}
           </CursorProvider>
