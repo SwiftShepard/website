@@ -451,7 +451,7 @@ const ProjectPage = () => {
         animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}>
         {project.coverImage && (
-          <div className="w-full h-[60vh] relative overflow-hidden">
+          <div className="w-full h-[45vh] relative overflow-hidden">
             <div className="absolute inset-0 animate-ken-burns">
               {project.coverImage.endsWith('.mp4') || project.coverImage.endsWith('.webm') ? (
                 <video
@@ -474,9 +474,9 @@ const ProjectPage = () => {
             </div>
             
             {/* Titre et catégorie sur l'image de couverture */}
-            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 animate-slide-up">
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-9 animate-slide-up">
               <div className="w-full px-4 md:px-8 xl:px-16">
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">{project.title}</h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 drop-shadow-lg">{project.title}</h1>
                 <p className="text-xl text-white/90 max-w-2xl mb-6 drop-shadow-md">
                   {project.summary || project.description?.substring(0, 120) + '...'}
                 </p>
@@ -502,10 +502,10 @@ const ProjectPage = () => {
         {/* Contenu principal en mode flexbox */}
         <div className="flex flex-col lg:flex-row max-w-full w-full px-4 md:px-8 xl:px-16">
           {/* Colonne principale - Images en plein format */}
-          <div className="flex-grow lg:pr-16 animate-slide-in-left">
+          <div className="flex-grow lg:pr-8 animate-slide-in-left">
             {/* Filtres de catégorie si disponibles - Mobile uniquement */}
             {hasCategories && (
-              <div className="mb-8 mt-8 lg:hidden">
+              <div className="mb-4 mt-4 lg:hidden">
                 <div className="flex flex-wrap gap-3">
                   <button
                     className={`px-4 py-2 rounded-full text-base font-medium transition-colors ${
@@ -536,7 +536,7 @@ const ProjectPage = () => {
           
             {/* Galerie d'images en plein format */}
             {(project.media && project.media.length > 0) ? (
-              <div className="w-full space-y-20 pt-12 pb-24">
+              <div className="w-full space-y-10 pt-6 pb-12">
                 {filteredMedia.map((media: MediaItem, index: number) => (
                   <div 
                     key={index} 
@@ -544,12 +544,12 @@ const ProjectPage = () => {
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
                   >
-                    <div className="relative">
+                    <div className="relative aspect-video bg-gray-100">
                       {media.path.endsWith('.mp4') || media.path.endsWith('.webm') ? (
                         <video 
                           ref={(el) => setVideoRef(index, el)}
                           src={media.path}
-                          className="w-full h-auto object-contain mx-auto cursor-pointer group-hover:scale-[1.01] transition-transform duration-500"
+                          className="absolute inset-0 w-full h-full object-contain cursor-pointer group-hover:scale-[1.01] transition-transform duration-500"
                           onClick={() => openImageViewer(media.path, filteredMedia.indexOf(media))}
                           muted
                           loop
@@ -559,7 +559,7 @@ const ProjectPage = () => {
                         <img 
                           src={media.path} 
                           alt={media.description || `Image ${index + 1}`}
-                          className="w-full h-auto object-contain mx-auto cursor-pointer group-hover:scale-[1.01] transition-transform duration-500"
+                          className="absolute inset-0 w-full h-full object-contain cursor-pointer group-hover:scale-[1.01] transition-transform duration-500"
                           onError={handleImageError}
                           onClick={() => openImageViewer(media.path, filteredMedia.indexOf(media))}
                         />
@@ -575,7 +575,7 @@ const ProjectPage = () => {
                     </div>
                     {/* Toujours afficher la section de description, même si elle est vide */}
                     {media.description && (
-                      <div className="py-10 px-12 text-gray-700 max-w-4xl mx-auto">
+                      <div className="py-5 px-6 text-gray-700 max-w-4xl mx-auto">
                         <p className="text-xl leading-relaxed">
                           {media.description}
                         </p>
@@ -585,7 +585,7 @@ const ProjectPage = () => {
                 ))}
               </div>
             ) : project.gallery && project.gallery.length > 0 ? (
-              <div className="w-full space-y-20 pt-12 pb-24">
+              <div className="w-full space-y-10 pt-6 pb-12">
                 {project.gallery.map((imagePath: string, index: number) => (
                   <div 
                     key={index} 
@@ -593,11 +593,11 @@ const ProjectPage = () => {
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
                   >
-                    <div className="relative">
+                    <div className="relative aspect-video bg-gray-100">
                       <img 
                         src={imagePath} 
                         alt={`Image ${index + 1}`}
-                        className="w-full h-auto object-contain mx-auto cursor-pointer group-hover:scale-[1.02] transition-transform duration-500"
+                        className="absolute inset-0 w-full h-full object-contain cursor-pointer group-hover:scale-[1.02] transition-transform duration-500"
                         onError={handleImageError}
                         onClick={() => openImageViewer(imagePath, index)}
                       />
@@ -610,7 +610,7 @@ const ProjectPage = () => {
                         </button>
                       </div>
                     </div>
-                    <div className="py-10 px-12 text-gray-700">
+                    <div className="py-5 px-6 text-gray-700">
                       <p className="text-xl leading-relaxed">{`Image ${index + 1}`}</p>
                     </div>
                   </div>
@@ -624,11 +624,11 @@ const ProjectPage = () => {
           </div>
           
           {/* Panneau d'informations sur le projet (sur le côté droit en mode desktop) */}
-          <div className="lg:w-[500px] xl:w-[600px] 2xl:w-[700px] pt-10 lg:sticky lg:top-20 lg:self-start animate-slide-in-right">
+          <div className="lg:w-[475px] xl:w-[575px] 2xl:w-[675px] pt-5 lg:sticky lg:top-20 lg:self-start animate-slide-in-right">
             {/* Filtres de catégorie si disponibles - Desktop uniquement */}
             {hasCategories && (
-              <div className="mb-8 hidden lg:block">
-                <h3 className="text-2xl font-bold mb-4 text-[#0D1117]">{language === 'fr' ? 'Catégories' : 'Categories'}</h3>
+              <div className="mb-4 hidden lg:block">
+                <h3 className="text-2xl font-bold mb-2 text-[#0D1117]">{language === 'fr' ? 'Catégories' : 'Categories'}</h3>
                 <div className="flex flex-wrap gap-3">
                   <button
                     className={`px-5 py-3 rounded-full text-lg transition-colors ${
@@ -658,15 +658,15 @@ const ProjectPage = () => {
             )}
             
             {/* Informations du projet */}
-            <div className="bg-white rounded-lg p-10 mb-8 animate-fade-in shadow-lg">
-              <h2 className="text-4xl font-bold text-[#0D1117] mb-8 pb-4 border-b border-gray-200 section-title">
+            <div className="bg-white rounded-lg p-6 mb-4 animate-fade-in shadow-lg">
+              <h2 className="text-4xl font-bold text-[#0D1117] mb-4 pb-2 border-b border-gray-200 section-title">
                 {language === 'fr' ? 'Informations' : 'Information'}
               </h2>
               
-              <div className="space-y-10">
+              <div className="space-y-5">
                 {/* Description */}
                 <div>
-                  <h3 className="text-2xl font-bold text-[#0D1117] mb-4 section-title">{language === 'fr' ? 'Description' : 'Description'}</h3>
+                  <h3 className="text-2xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'Description' : 'Description'}</h3>
                   <div className="text-gray-700 text-xl leading-relaxed" 
                     dangerouslySetInnerHTML={{ 
                       __html: project.description
@@ -680,7 +680,7 @@ const ProjectPage = () => {
                 {/* Description longue */}
                 {project.longDescription && (
                   <div>
-                    <h3 className="text-2xl font-bold text-[#0D1117] mb-4 section-title">{language === 'fr' ? 'À propos du projet' : 'About the project'}</h3>
+                    <h3 className="text-2xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'À propos du projet' : 'About the project'}</h3>
                     <div className="text-gray-700 text-xl leading-relaxed">
                       {typeof project.longDescription === 'string' 
                         ? <div dangerouslySetInnerHTML={{ 
@@ -697,7 +697,7 @@ const ProjectPage = () => {
                 {/* Date */}
                 {project.date && (
                   <div>
-                    <h3 className="text-2xl font-bold text-[#0D1117] mb-4 section-title">{language === 'fr' ? 'Date' : 'Date'}</h3>
+                    <h3 className="text-2xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'Date' : 'Date'}</h3>
                     <div className="flex flex-wrap gap-4">
                       <span 
                         className="px-6 py-3 bg-white text-gray-700 rounded-full text-xl flex items-center gap-3 hover:bg-gray-100 transition-colors shadow-sm interactive-element"
@@ -714,8 +714,8 @@ const ProjectPage = () => {
                 {/* Outils utilisés */}
                 {project.tools && project.tools.length > 0 && (
                   <div>
-                    <h3 className="text-2xl font-bold text-[#0D1117] mb-4 section-title">{language === 'fr' ? 'Outils utilisés' : 'Tools used'}</h3>
-                    <div className="flex flex-wrap gap-4 bg-[#F5F5F0] p-8 rounded-lg">
+                    <h3 className="text-2xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'Outils utilisés' : 'Tools used'}</h3>
+                    <div className="flex flex-wrap gap-4 bg-[#F5F5F0] p-4 rounded-lg">
                       {project.tools.map((tool: string, index: number) => (
                         <span 
                           key={index}
@@ -730,7 +730,7 @@ const ProjectPage = () => {
                 )}
                 
                 {/* CTA pour voir d'autres projets */}
-                <div className="pt-6">
+                <div className="pt-3">
                   <Link href="/#portfolio" className="inline-flex items-center text-white bg-[#FF3333] hover:bg-[#FF5757] px-8 py-3 rounded-full transition-all duration-300 group interactive-element">
                     <span className="mr-2">{language === 'fr' ? 'Voir d\'autres projets' : 'View other projects'}</span>
                     <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -745,7 +745,7 @@ const ProjectPage = () => {
       </div>
       
       {/* Footer */}
-      <div className="bg-[#EAEAE5] border-t border-gray-200 py-10 mt-16">
+      <div className="bg-[#EAEAE5] border-t border-gray-200 py-5 mt-8">
         <div className="w-full px-4 md:px-8 xl:px-16">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-500 text-base mb-4 md:mb-0">

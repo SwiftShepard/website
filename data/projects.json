@@ -1,153 +1,67 @@
 {
   "en": {
-    "test": {
-      "id": "test",
-      "slug": "test",
-      "title": "test",
-      "description": "test desc courte",
-      "longDescription": "test desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longuetest desc longue",
-      "category": "Environments",
-      "coverImage": "/uploads/d48aeeb1-91e6-4f51-b3e1-dfb7cfd5c843.png",
-      "thumbnailImage": "/uploads/d48aeeb1-91e6-4f51-b3e1-dfb7cfd5c843.png",
+    "StarGardener": {
+      "id": "StarGardener",
+      "slug": "star-gardener",
+      "title": "Star Gardener",
+      "description": "Star Gardener is a single-player exploration game where you collect the last traces of pollen to restore and make it bloom again. By strategically spreading the pollen, you can progress through this lost world and discover more about the journey ahead.",
+      "longDescription": "",
+      "category": "Props",
+      "coverImage": "/uploads/48d01a73-5c6e-4071-aaf6-25f68ebbcaf7.png",
+      "thumbnailImage": "blob:http://localhost:3000/7e1b1351-0baf-4601-9974-c3199dd21ac8",
       "gallery": [
-        "/uploads/f025c9c8-569a-423e-838d-7c48138b4b57.png",
-        "/uploads/d48aeeb1-91e6-4f51-b3e1-dfb7cfd5c843.png",
-        "/uploads/03ba326a-17d3-41f8-9509-1aa93ba003cf.mp4"
+        "/uploads/48d01a73-5c6e-4071-aaf6-25f68ebbcaf7.png",
+        "/uploads/10027fd3-5498-4582-8f48-d3bef312e16c.jpg",
+        "/uploads/784d84e5-dff5-47b6-9d80-0e6a7a5f4a59.gif",
+        "/uploads/842ac54a-20ef-46c9-8132-ee25150d8cd0.mp4",
+        "/uploads/9f13cfe0-bde4-4285-be85-4e2d29aabcee.mp4",
+        "/uploads/4e6abdb4-c8c9-4bf4-9a0b-63cff0ac2265.mp4",
+        "/uploads/38ca8326-6ed8-49e7-b6fb-683ab7406763.gif",
+        "/uploads/622954cf-f3c2-43c6-8ef4-3b73dd136942.png"
       ],
-      "featured": true,
-      "stats": {
-        "polygons": "15.4m",
-        "textures": "7",
-        "time": "12 semaines",
-        "iterations": "4"
-      },
-      "date": "2025-08",
-      "client": "Projet personnel",
+      "featured": false,
+      "projectType": "School",
       "tools": [
+        "3ds max",
         "unreal engine 5",
         "Substance painter",
-        "Substance designer"
+        "Substance designer",
+        "Marmoset Toolbag",
+        "Photoshop"
       ],
+      "date": "2024-03",
       "media": [
         {
-          "path": "/uploads/f025c9c8-569a-423e-838d-7c48138b4b57.png",
-          "description": "aezertezezerezzr"
+          "path": "/uploads/48d01a73-5c6e-4071-aaf6-25f68ebbcaf7.png",
+          "description": "Game poster"
         },
         {
-          "path": "/uploads/d48aeeb1-91e6-4f51-b3e1-dfb7cfd5c843.png",
-          "description": ""
+          "path": "/uploads/10027fd3-5498-4582-8f48-d3bef312e16c.jpg",
+          "description": "Chara design made by Florian Bécavin go chick him out on artstation !"
         },
         {
-          "path": "/uploads/03ba326a-17d3-41f8-9509-1aa93ba003cf.mp4",
-          "description": ""
-        }
-      ]
-    },
-    "azerty": {
-      "id": "azerty",
-      "slug": "azerty",
-      "title": "azerty",
-      "description": "qsd",
-      "longDescription": "wxc",
-      "category": "Environments",
-      "coverImage": "/uploads/8eab3d81-c0fd-4c6f-8260-23c2d1cdbd81.png",
-      "thumbnailImage": "blob:http://localhost:3000/67360613-4369-4a48-bdd4-bf494e205f58",
-      "gallery": [
-        "/uploads/4fa8cb61-9093-49e2-9828-fbebd2d55ecd.mp4",
-        "/uploads/8eab3d81-c0fd-4c6f-8260-23c2d1cdbd81.png"
-      ],
-      "featured": false,
-      "projectType": "Studio",
-      "tools": [
-        "blender",
-        "3dsmax",
-        "unreal engine 5"
-      ],
-      "date": "2025-02",
-      "media": [
+          "path": "/uploads/784d84e5-dff5-47b6-9d80-0e6a7a5f4a59.gif",
+          "description": "anim test"
+        },
         {
-          "path": "/uploads/4fa8cb61-9093-49e2-9828-fbebd2d55ecd.mp4",
+          "path": "/uploads/842ac54a-20ef-46c9-8132-ee25150d8cd0.mp4",
+          "description": "Character wireframe"
+        },
+        {
+          "path": "/uploads/9f13cfe0-bde4-4285-be85-4e2d29aabcee.mp4",
+          "description": "Sand material"
+        },
+        {
+          "path": "/uploads/4e6abdb4-c8c9-4bf4-9a0b-63cff0ac2265.mp4",
+          "description": "Ground material"
+        },
+        {
+          "path": "/uploads/38ca8326-6ed8-49e7-b6fb-683ab7406763.gif",
           "description": ""
         },
         {
-          "path": "/uploads/8eab3d81-c0fd-4c6f-8260-23c2d1cdbd81.png",
-          "description": ""
-        }
-      ]
-    },
-    "sdfgvds": {
-      "id": "sdfgvds",
-      "slug": "sdfgvds",
-      "title": "sdfgvds",
-      "description": "qsd",
-      "longDescription": "qsd",
-      "category": "Environments",
-      "coverImage": "/uploads/d2a307ea-55ec-41f4-9363-e60d321dc3cf.png",
-      "thumbnailImage": "blob:http://localhost:3000/64c8f751-1a9c-4aa7-bac5-051b97d94e05",
-      "gallery": [
-        "/uploads/d2a307ea-55ec-41f4-9363-e60d321dc3cf.png"
-      ],
-      "featured": false,
-      "projectType": "Personal",
-      "tools": [],
-      "date": "",
-      "media": [
-        {
-          "path": "/uploads/d2a307ea-55ec-41f4-9363-e60d321dc3cf.png",
-          "description": ""
-        }
-      ]
-    },
-    "qsgqsvf": {
-      "id": "qsgqsvf",
-      "slug": "qsgqsvf",
-      "title": "qsgqsvf",
-      "description": "SDFS",
-      "longDescription": "SFS",
-      "category": "Environments",
-      "coverImage": "/uploads/397343ca-9adf-49f8-88d9-72fcf8b9f5a0.png",
-      "thumbnailImage": "blob:http://localhost:3000/2484863d-d29a-46c3-829a-4bf7a97915fc",
-      "gallery": [
-        "/uploads/397343ca-9adf-49f8-88d9-72fcf8b9f5a0.png"
-      ],
-      "featured": false,
-      "projectType": "Personal",
-      "tools": [],
-      "date": "",
-      "media": [
-        {
-          "path": "/uploads/397343ca-9adf-49f8-88d9-72fcf8b9f5a0.png",
-          "description": ""
-        }
-      ]
-    },
-    "ajajajaja": {
-      "id": "ajajajaja",
-      "slug": "ajajajaja",
-      "title": "ajajajaja",
-      "description": "vfgwxsfdf",
-      "longDescription": "sdfsfqfdsv",
-      "category": "Environments",
-      "coverImage": "/uploads/5d5cd75b-4ac3-4fb6-8e7a-96f93b8505a2.png",
-      "thumbnailImage": "blob:http://localhost:3000/6ad9be9c-1e6b-4581-9a99-2a18fcd942f5",
-      "gallery": [
-        "/uploads/5d5cd75b-4ac3-4fb6-8e7a-96f93b8505a2.png",
-        "/uploads/7a787aac-d607-44fc-a14f-e116289ebf42.png"
-      ],
-      "featured": false,
-      "projectType": "Personal",
-      "tools": [
-        "blender"
-      ],
-      "date": "",
-      "media": [
-        {
-          "path": "/uploads/5d5cd75b-4ac3-4fb6-8e7a-96f93b8505a2.png",
-          "description": ""
-        },
-        {
-          "path": "/uploads/7a787aac-d607-44fc-a14f-e116289ebf42.png",
-          "description": ""
+          "path": "/uploads/622954cf-f3c2-43c6-8ef4-3b73dd136942.png",
+          "description": "cozy grass isn't it ?"
         }
       ]
     }
