@@ -12,12 +12,12 @@
       "gallery": [
         "/uploads/48d01a73-5c6e-4071-aaf6-25f68ebbcaf7.png",
         "/uploads/10027fd3-5498-4582-8f48-d3bef312e16c.jpg",
-        "/uploads/784d84e5-dff5-47b6-9d80-0e6a7a5f4a59.gif",
-        "/uploads/842ac54a-20ef-46c9-8132-ee25150d8cd0.mp4",
+        "/uploads/2f4381f5-9f08-4497-9c63-6e56d0927d9a.mp4",
+        "/uploads/c28b4052-2cd8-476c-8b1c-fb023dbbabf2.mp4",
         "/uploads/9f13cfe0-bde4-4285-be85-4e2d29aabcee.mp4",
         "/uploads/4e6abdb4-c8c9-4bf4-9a0b-63cff0ac2265.mp4",
-        "/uploads/38ca8326-6ed8-49e7-b6fb-683ab7406763.gif",
-        "/uploads/622954cf-f3c2-43c6-8ef4-3b73dd136942.png"
+        "/uploads/622954cf-f3c2-43c6-8ef4-3b73dd136942.png",
+        "/uploads/add0d218-9004-41e4-86f1-97e2be8c4f21.mp4"
       ],
       "featured": false,
       "projectType": "School",
@@ -37,15 +37,15 @@
         },
         {
           "path": "/uploads/10027fd3-5498-4582-8f48-d3bef312e16c.jpg",
-          "description": "Chara design made by Florian Bécavin go chick him out on artstation !"
+          "description": "Chara design made by Florian Bécavin go check him out on artstation !"
         },
         {
-          "path": "/uploads/784d84e5-dff5-47b6-9d80-0e6a7a5f4a59.gif",
-          "description": "anim test"
+          "path": "/uploads/2f4381f5-9f08-4497-9c63-6e56d0927d9a.mp4",
+          "description": "Turnaround"
         },
         {
-          "path": "/uploads/842ac54a-20ef-46c9-8132-ee25150d8cd0.mp4",
-          "description": "Character wireframe"
+          "path": "/uploads/c28b4052-2cd8-476c-8b1c-fb023dbbabf2.mp4",
+          "description": "Anim test"
         },
         {
           "path": "/uploads/9f13cfe0-bde4-4285-be85-4e2d29aabcee.mp4",
@@ -56,12 +56,12 @@
           "description": "Ground material"
         },
         {
-          "path": "/uploads/38ca8326-6ed8-49e7-b6fb-683ab7406763.gif",
-          "description": ""
-        },
-        {
           "path": "/uploads/622954cf-f3c2-43c6-8ef4-3b73dd136942.png",
           "description": "cozy grass isn't it ?"
+        },
+        {
+          "path": "/uploads/add0d218-9004-41e4-86f1-97e2be8c4f21.mp4",
+          "description": "Custom grass"
         }
       ]
     }
