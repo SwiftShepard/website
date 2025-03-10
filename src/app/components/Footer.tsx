@@ -60,7 +60,7 @@ const Footer = () => {
           {/* Logo et description */}
           <div className="flex flex-col items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-3xl font-bold text-[#0f0d0c]">PORT<span className="text-[#FF3333]">FOLIO</span></span>
+              <span className="text-3xl font-bold text-[#FF3333]">PORTFOLIO</span>
             </Link>
             <p className="text-gray-700 mt-4 text-center leading-relaxed">
               {t('footer.description')}

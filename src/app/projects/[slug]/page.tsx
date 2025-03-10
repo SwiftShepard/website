@@ -505,10 +505,10 @@ const ProjectPage = () => {
           <div className="flex-grow lg:pr-8 animate-slide-in-left">
             {/* Filtres de catégorie si disponibles - Mobile uniquement */}
             {hasCategories && (
-              <div className="mb-4 mt-4 lg:hidden">
-                <div className="flex flex-wrap gap-3">
+              <div className="mb-3 mt-3 lg:hidden">
+                <div className="flex flex-wrap gap-2">
                   <button
-                    className={`px-4 py-2 rounded-full text-base font-medium transition-colors ${
+                    className={`px-3 py-2 rounded-full text-base font-medium transition-colors ${
                       selectedCategory === null 
                         ? 'bg-[#FF3333] text-white' 
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -520,7 +520,7 @@ const ProjectPage = () => {
                   {Array.from(new Set(project.media.map((media: MediaItem) => media.category))).map((category: unknown, index: number) => (
                     <button
                       key={index}
-                      className={`px-4 py-2 rounded-full text-base font-medium transition-colors ${
+                      className={`px-3 py-2 rounded-full text-base font-medium transition-colors ${
                         selectedCategory === category 
                           ? 'bg-[#FF3333] text-white' 
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -624,14 +624,14 @@ const ProjectPage = () => {
           </div>
           
           {/* Panneau d'informations sur le projet (sur le côté droit en mode desktop) */}
-          <div className="lg:w-[475px] xl:w-[575px] 2xl:w-[675px] pt-5 lg:sticky lg:top-20 lg:self-start animate-slide-in-right">
+          <div className="lg:w-[350px] xl:w-[380px] 2xl:w-[420px] pt-5 lg:sticky lg:top-20 lg:self-start animate-slide-in-right">
             {/* Filtres de catégorie si disponibles - Desktop uniquement */}
             {hasCategories && (
-              <div className="mb-4 hidden lg:block">
-                <h3 className="text-2xl font-bold mb-2 text-[#0D1117]">{language === 'fr' ? 'Catégories' : 'Categories'}</h3>
-                <div className="flex flex-wrap gap-3">
+              <div className="mb-3 hidden lg:block">
+                <h3 className="text-xl font-bold mb-2 text-[#0D1117]">{language === 'fr' ? 'Catégories' : 'Categories'}</h3>
+                <div className="flex flex-wrap gap-2">
                   <button
-                    className={`px-5 py-3 rounded-full text-lg transition-colors ${
+                    className={`px-3 py-2 rounded-full text-base transition-colors ${
                       selectedCategory === null 
                         ? 'bg-[#FF3333] text-white' 
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -643,7 +643,7 @@ const ProjectPage = () => {
                   {Array.from(new Set(project.media.map((media: MediaItem) => media.category))).map((category: unknown, index: number) => (
                     <button
                       key={index}
-                      className={`px-5 py-3 rounded-full text-lg transition-colors ${
+                      className={`px-3 py-2 rounded-full text-base transition-colors ${
                         selectedCategory === category 
                           ? 'bg-[#FF3333] text-white' 
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -658,16 +658,16 @@ const ProjectPage = () => {
             )}
             
             {/* Informations du projet */}
-            <div className="bg-white rounded-lg p-6 mb-4 animate-fade-in shadow-lg">
-              <h2 className="text-4xl font-bold text-[#0D1117] mb-4 pb-2 border-b border-gray-200 section-title">
+            <div className="bg-white rounded-lg p-5 mb-4 animate-fade-in shadow-lg">
+              <h2 className="text-3xl font-bold text-[#0D1117] mb-3 pb-2 border-b border-gray-200 section-title">
                 {language === 'fr' ? 'Informations' : 'Information'}
               </h2>
               
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {/* Description */}
                 <div>
-                  <h3 className="text-2xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'Description' : 'Description'}</h3>
-                  <div className="text-gray-700 text-xl leading-relaxed" 
+                  <h3 className="text-xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'Description' : 'Description'}</h3>
+                  <div className="text-gray-700 text-base leading-relaxed" 
                     dangerouslySetInnerHTML={{ 
                       __html: project.description
                         .replace(/\n/g, '<br />')
@@ -680,8 +680,8 @@ const ProjectPage = () => {
                 {/* Description longue */}
                 {project.longDescription && (
                   <div>
-                    <h3 className="text-2xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'À propos du projet' : 'About the project'}</h3>
-                    <div className="text-gray-700 text-xl leading-relaxed">
+                    <h3 className="text-xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'À propos du projet' : 'About the project'}</h3>
+                    <div className="text-gray-700 text-base leading-relaxed">
                       {typeof project.longDescription === 'string' 
                         ? <div dangerouslySetInnerHTML={{ 
                             __html: project.longDescription
@@ -697,12 +697,12 @@ const ProjectPage = () => {
                 {/* Date */}
                 {project.date && (
                   <div>
-                    <h3 className="text-2xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'Date' : 'Date'}</h3>
-                    <div className="flex flex-wrap gap-4">
+                    <h3 className="text-xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'Date' : 'Date'}</h3>
+                    <div className="flex flex-wrap gap-2">
                       <span 
-                        className="px-6 py-3 bg-white text-gray-700 rounded-full text-xl flex items-center gap-3 hover:bg-gray-100 transition-colors shadow-sm interactive-element"
+                        className="px-4 py-2 bg-white text-gray-700 rounded-full text-base flex items-center gap-2 hover:bg-gray-100 transition-colors shadow-sm interactive-element"
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         {project.date}
@@ -715,13 +715,13 @@ const ProjectPage = () => {
                 {project.tools && project.tools.length > 0 && (
                   <div>
                     <h3 className="text-2xl font-bold text-[#0D1117] mb-2 section-title">{language === 'fr' ? 'Outils utilisés' : 'Tools used'}</h3>
-                    <div className="flex flex-wrap gap-4 bg-[#F5F5F0] p-4 rounded-lg">
+                    <div className="flex flex-wrap gap-2 bg-[#F5F5F0] p-3 rounded-lg">
                       {project.tools.map((tool: string, index: number) => (
                         <span 
                           key={index}
-                          className="px-6 py-3 bg-white text-gray-700 rounded-full text-xl flex items-center gap-4 hover:bg-gray-100 transition-colors shadow-sm tool-badge"
+                          className="px-3 py-2 bg-white text-gray-700 rounded-full text-base flex items-center gap-2 hover:bg-gray-100 transition-colors shadow-sm tool-badge"
                         >
-                          <ToolLogo toolName={tool} className="w-8 h-8" />
+                          <ToolLogo toolName={tool} className="w-5 h-5" />
                           {tool}
                         </span>
                       ))}
@@ -730,10 +730,10 @@ const ProjectPage = () => {
                 )}
                 
                 {/* CTA pour voir d'autres projets */}
-                <div className="pt-3">
-                  <Link href="/#portfolio" className="inline-flex items-center text-white bg-[#FF3333] hover:bg-[#FF5757] px-8 py-3 rounded-full transition-all duration-300 group interactive-element">
+                <div className="pt-2">
+                  <Link href="/#portfolio" className="inline-flex items-center text-white bg-[#FF3333] hover:bg-[#FF5757] px-5 py-2 rounded-full transition-all duration-300 group interactive-element text-base">
                     <span className="mr-2">{language === 'fr' ? 'Voir d\'autres projets' : 'View other projects'}</span>
-                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </Link>

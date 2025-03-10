@@ -42,7 +42,7 @@ export const translations = {
       }
     },
     workflow: {
-      title: "Each Environment Step by Step",
+      title: "A well thought workflow",
       description: "My creative process follows a methodical approach to ensure exceptional quality.",
       steps: [
         {
@@ -147,7 +147,7 @@ export const translations = {
       }
     },
     workflow: {
-      title: "Chaque Environnement Étape par Étape",
+      title: "Un workflow bien pensé",
       description: "Mon processus créatif suit une approche méthodique pour garantir une qualité exceptionnelle.",
       steps: [
         {

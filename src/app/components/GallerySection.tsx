@@ -395,20 +395,10 @@ const PortfolioSection = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transform transition-all duration-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <div className="inline-block mb-2">
-            <span className="text-lg font-semibold text-[#FF3333] tracking-wider uppercase">
-              {t('portfolio.title')}
-            </span>
-          </div>
-          <div className="relative mb-6">
-            <h2 className="text-6xl md:text-7xl font-bold text-white mb-2 opacity-10">
-              {t('portfolio.title')}
-            </h2>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="h-0.5 w-40 bg-gradient-to-r from-transparent via-[#FF3333] to-transparent"></div>
-            </div>
-          </div>
-          <p className="text-xl md:text-2xl text-black font-medium max-w-3xl mx-auto">
+          <h2 className="text-6xl md:text-7xl font-bold text-[#FF3333] mb-6">
+            {t('portfolio.title')}
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-200 font-medium max-w-3xl mx-auto">
             {t('portfolio.description')}
           </p>
         </div>

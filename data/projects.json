@@ -5,7 +5,7 @@
       "slug": "star-gardener",
       "title": "Star Gardener",
       "description": "Star Gardener is a single-player exploration game where you collect the last traces of pollen to restore and make it bloom again. By strategically spreading the pollen, you can progress through this lost world and discover more about the journey ahead.",
-      "longDescription": "",
+      "longDescription": "As the lead 3D artist on Star Gardener, I played a key role in shaping the game’s artistic direction and producing its visual elements.\n\nMain Character\nModeling, Texturing & Shaders: I created the 3D model, textures, and a custom shader to seamlessly fit the game’s aesthetic.\nRigging & Skinning: I handled the rigging and skinning, ensuring smooth deformations and optimized integration for animation and gameplay.\nEnvironment\nRock Assets: I modeled and textured various rock formations, contributing to the game's visual identity and atmosphere.\nProcedural Materials: I developed materials in Substance Designer, including sand and grass, to create high-quality, optimized surfaces.\nCustom Grass in Unreal Engine: I designed a custom grass system using advanced shaders and a custom wind effect, enhancing realism and immersion.\nMy work helped establish a strong artistic cohesion for Star Gardener while optimizing performance for a smooth and immersive experience.\n\nYou can download the game on itch.io : https://loyyxa.itch.io/star-gardener",
       "category": "Props",
       "coverImage": "/uploads/48d01a73-5c6e-4071-aaf6-25f68ebbcaf7.png",
       "thumbnailImage": "blob:http://localhost:3000/7e1b1351-0baf-4601-9974-c3199dd21ac8",
@@ -14,10 +14,10 @@
         "/uploads/10027fd3-5498-4582-8f48-d3bef312e16c.jpg",
         "/uploads/2f4381f5-9f08-4497-9c63-6e56d0927d9a.mp4",
         "/uploads/c28b4052-2cd8-476c-8b1c-fb023dbbabf2.mp4",
-        "/uploads/9f13cfe0-bde4-4285-be85-4e2d29aabcee.mp4",
-        "/uploads/4e6abdb4-c8c9-4bf4-9a0b-63cff0ac2265.mp4",
+        "/uploads/add0d218-9004-41e4-86f1-97e2be8c4f21.mp4",
         "/uploads/622954cf-f3c2-43c6-8ef4-3b73dd136942.png",
-        "/uploads/add0d218-9004-41e4-86f1-97e2be8c4f21.mp4"
+        "/uploads/6f94b3d2-c6ab-4de3-b153-ad9d4e9a3d4b.mp4",
+        "/uploads/5b035e93-77ae-4735-a028-9972de01f9af.mp4"
       ],
       "featured": false,
       "projectType": "School",
@@ -48,20 +48,20 @@
           "description": "Anim test"
         },
         {
-          "path": "/uploads/9f13cfe0-bde4-4285-be85-4e2d29aabcee.mp4",
-          "description": "Sand material"
-        },
-        {
-          "path": "/uploads/4e6abdb4-c8c9-4bf4-9a0b-63cff0ac2265.mp4",
-          "description": "Ground material"
+          "path": "/uploads/add0d218-9004-41e4-86f1-97e2be8c4f21.mp4",
+          "description": "Custom grass"
         },
         {
           "path": "/uploads/622954cf-f3c2-43c6-8ef4-3b73dd136942.png",
           "description": "cozy grass isn't it ?"
         },
         {
-          "path": "/uploads/add0d218-9004-41e4-86f1-97e2be8c4f21.mp4",
-          "description": "Custom grass"
+          "path": "/uploads/6f94b3d2-c6ab-4de3-b153-ad9d4e9a3d4b.mp4",
+          "description": "Sand material"
+        },
+        {
+          "path": "/uploads/5b035e93-77ae-4735-a028-9972de01f9af.mp4",
+          "description": "Ground material"
         }
       ]
     }
