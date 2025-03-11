@@ -86,7 +86,13 @@
       ],
       "featured": false,
       "projectType": "Personal",
-      "tools": [],
+      "tools": [
+        "3ds max",
+        "Blender",
+        "Substance painter",
+        "Marmoset toolbag",
+        "Photoshop"
+      ],
       "date": "2024-08",
       "media": [
         {
