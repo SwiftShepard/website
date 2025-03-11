@@ -64,6 +64,64 @@
           "description": "Ground material"
         }
       ]
+    },
+    "PPSh41": {
+      "id": "PPSh41",
+      "slug": "ppsh-41",
+      "title": "PPSh-41",
+      "description": "This ППШ (Papasha or PPSh-41) is made of hand pushed vertices as well as one 4k material for the weapon, one 2k material for each magazine and 50k tris in total.\nCalibered here in 9mm.",
+      "longDescription": "",
+      "category": "Props",
+      "coverImage": "/uploads/adcfbadb-525c-483f-9528-4ed6698ea6f9.jpg",
+      "thumbnailImage": "blob:http://localhost:3000/856b8d02-9e20-4659-9a9c-60382b9fe27f",
+      "gallery": [
+        "/uploads/adcfbadb-525c-483f-9528-4ed6698ea6f9.jpg",
+        "/uploads/bee9f9ae-6b9f-4bbb-85fa-cf5d66cab74c.jpg",
+        "/uploads/2c7df854-2c85-4538-a9ea-6a9d04c1b546.png",
+        "/uploads/b49fe745-2d0c-48f6-8f5b-ad899005b47c.png",
+        "/uploads/005fdde5-aa31-4a8d-9e1e-8e7d30eb0e2f.png",
+        "/uploads/106aa783-4b30-4164-a7ce-9d7545504cd6.png",
+        "/uploads/e88f9d72-a0b2-401e-a7e1-bcaf0b451fd3.png",
+        "/uploads/dd54dbcc-046f-4ed0-990b-8657845a1a35.png"
+      ],
+      "featured": false,
+      "projectType": "Personal",
+      "tools": [],
+      "date": "2024-08",
+      "media": [
+        {
+          "path": "/uploads/adcfbadb-525c-483f-9528-4ed6698ea6f9.jpg",
+          "description": ""
+        },
+        {
+          "path": "/uploads/bee9f9ae-6b9f-4bbb-85fa-cf5d66cab74c.jpg",
+          "description": ""
+        },
+        {
+          "path": "/uploads/2c7df854-2c85-4538-a9ea-6a9d04c1b546.png",
+          "description": ""
+        },
+        {
+          "path": "/uploads/b49fe745-2d0c-48f6-8f5b-ad899005b47c.png",
+          "description": ""
+        },
+        {
+          "path": "/uploads/005fdde5-aa31-4a8d-9e1e-8e7d30eb0e2f.png",
+          "description": ""
+        },
+        {
+          "path": "/uploads/106aa783-4b30-4164-a7ce-9d7545504cd6.png",
+          "description": ""
+        },
+        {
+          "path": "/uploads/e88f9d72-a0b2-401e-a7e1-bcaf0b451fd3.png",
+          "description": ""
+        },
+        {
+          "path": "/uploads/dd54dbcc-046f-4ed0-990b-8657845a1a35.png",
+          "description": ""
+        }
+      ]
     }
   },
   "fr": {}
