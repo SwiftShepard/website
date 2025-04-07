@@ -80,6 +80,11 @@ export const toolIcons: ToolIcon[] = [
     name: 'Premiere Pro',
     icon: '/images/logos/premiere-pro.svg',
     keywords: ['premiere', 'premiere pro', 'adobe premiere']
+  },
+  {
+    name: 'Marmoset',
+    icon: '/images/logos/marmoset.svg',
+    keywords: ['marmoset', 'marmoset toolbag', 'toolbag']
   }
 ];
 

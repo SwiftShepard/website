@@ -398,7 +398,7 @@ const PortfolioSection = () => {
           <h2 className="text-6xl md:text-7xl font-bold text-[#FF3333] mb-6">
             {t('portfolio.title')}
           </h2>
-          <p className="text-xl md:text-2xl text-gray-200 font-medium max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-[#0D1117] font-medium max-w-3xl mx-auto">
             {t('portfolio.description')}
           </p>
         </div>
